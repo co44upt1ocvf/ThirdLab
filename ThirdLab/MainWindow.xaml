@@ -1,0 +1,43 @@
+﻿<Window x:Class="ThirdLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThirdLab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\ovtsu\Downloads\Wallpaper.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" Background="Gold">
+            <Border Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1"/>
+            <TextBlock Text="Entity Framework Table" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0" Background="Gold">
+            <Border Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1"/>
+            <TextBlock Text="DataSet Table" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+        </Grid>
+        <DataGrid x:Name="EFTable" Grid.Column="0" Grid.Row="1" AutoGenerateColumns="False" Background="Transparent" BorderBrush="Transparent">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Ticket_ID}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding Circus_Events.Title}" Header="Название представления"/>
+                <DataGridTextColumn Binding="{Binding Circus_Events.Event_Date}" Header="Дата проведения представления"/>
+                <DataGridTextColumn Binding="{Binding Circus_Events.Price}" Header="Цена за один билет"/>
+                <DataGridTextColumn Binding="{Binding Customers.Firstname}" Header="Имя покупателя"/>
+                <DataGridTextColumn Binding="{Binding Customers.Surnamre}" Header="Фамилия покупателя"/>
+                <DataGridTextColumn Binding="{Binding Customers.Email}" Header="Эл. почта покупателя"/>
+                <DataGridTextColumn Binding="{Binding Quantity}" Header="Кол-во купленных билетов"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="DataSetTable" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderBrush="Transparent"/>
+    </Grid>
+</Window>
