@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThirdLab"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\ovtsu\Downloads\Wallpaper.jpg"/>
+            <ImageBrush ImageSource="D:\Labs\ThirdLab\ThirdLab\Wallpaper.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -33,7 +34,7 @@
                 <DataGridTextColumn Binding="{Binding Circus_Events.Event_Date}" Header="Дата проведения представления"/>
                 <DataGridTextColumn Binding="{Binding Circus_Events.Price}" Header="Цена за один билет"/>
                 <DataGridTextColumn Binding="{Binding Customers.Firstname}" Header="Имя покупателя"/>
-                <DataGridTextColumn Binding="{Binding Customers.Surnamre}" Header="Фамилия покупателя"/>
+                <DataGridTextColumn Binding="{Binding Customers.Surname}" Header="Фамилия покупателя"/>
                 <DataGridTextColumn Binding="{Binding Customers.Email}" Header="Эл. почта покупателя"/>
                 <DataGridTextColumn Binding="{Binding Quantity}" Header="Кол-во купленных билетов"/>
             </DataGrid.Columns>
